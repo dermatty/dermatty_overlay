@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>dermatty_overlay</name>
+		<description>Unofficial portage overlay for Gentoo Linux providing ebuilds ginzibix, the binary usenet client for gname</description>
+		<homepage>https://github.com/dermatty/dermatty_overlay</homepage>
+		<owner>
+			<email>N/A</email>
+		</owner>
+		<source type="git">https://github.com/dermatty/dermatty_overlay.git</source>
+	</repo>
+</repositories>
