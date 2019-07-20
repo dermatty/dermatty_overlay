@@ -1,15 +1,18 @@
-EAPI="7"
+EAPI="6"
 
 PYTHON_COMPAT=( python3_6 )
 
-inherit distutils-r1 eutils user
+inherit distutils-r1
 
 MY_PN="GINZIBIX"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Binary newsreader for the Gnome Desktop"
-HOMEPAGE="https://github.com/dermatty/${MY_PN}"
-SRC_URI="https://github.com/dermatty/GINZIBIX/archive/${PV}.tar.gz"
+HOMEPAGE="https://github.com/dermatty/GINZIBIX"
+SRC_URI="https://github.com/dermatty/${MY_PN}/archive/${PN}-${PV}.tar.gz"
+#https://github.com/dermatty/GINZIBIX/archive/ginzibix-1.0.tar.gz
+
+echo $SRC_URI
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -29,13 +32,15 @@ RDEPEND=">=dev-python/pyzmq-17.1.0[${PYTHON_USEDEP}]
 	>=net-nntp/ginzyenc-1.2.3[${PYTHON_USEDEP}]
 	app-arch/unrar"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_PN}-${PN}-${PV}
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
+
 python_install_all() {
 	rm README* || die
 
 	distutils-r1_python_install_all
 }
+
