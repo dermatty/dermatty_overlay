@@ -26,7 +26,7 @@ RDEPEND=">=dev-python/pyzmq-17.1.0[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]
 	>=dev-python/matplotlib-3.1.1[${PYTHON_USEDEP}]
-	>=dev-python/ginzyenc-1.2.3[${PYTHON_USEDEP}]
+	>=net-nntp/ginzyenc-1.2.3[${PYTHON_USEDEP}]
 	app-arch/unrar[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/${MY_P}
