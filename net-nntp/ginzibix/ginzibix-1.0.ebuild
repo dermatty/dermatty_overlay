@@ -41,6 +41,9 @@ python_prepare_all() {
 python_install_all() {
 	rm README* || die
 
+    insinto /etc/default/${PN}
+    doins ${S}/${PN}/data/ginzibix.config
+
 	distutils-r1_python_install_all
 }
 
