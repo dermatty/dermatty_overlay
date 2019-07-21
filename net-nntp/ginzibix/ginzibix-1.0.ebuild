@@ -2,7 +2,7 @@ EAPI="6"
 
 PYTHON_COMPAT=( python3_6 )
 
-inherit distutils-r1
+inherit distutils-r1 desktop xdg
 
 MY_PN="GINZIBIX"
 MY_P="${MY_PN}-${PV}"
@@ -41,8 +41,20 @@ python_prepare_all() {
 python_install_all() {
 	rm README* || die
 
-    insinto /etc/default/${PN}
+    insinto /etc/default
     doins ${S}/${PN}/data/ginzibix.config
+
+    insinto /usr/share/${PN}
+    doins ${S}/${PN}/data/ginzibix.glade
+
+    doicon ${S}/${PN}/data/ginzibix.png
+
+    local res
+	for res in 16 32 48 64 96 128 256 512; do
+		newicon -s ${res} ${S}/${PN}/data/ginzibix${res}x${res}.png ginzibix.png
+	done
+
+    domenu  ${S}/${PN}/data/ginzibix.desktop
 
 	distutils-r1_python_install_all
 }
