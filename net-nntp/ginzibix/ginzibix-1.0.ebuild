@@ -10,7 +10,6 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Binary newsreader for the Gnome Desktop"
 HOMEPAGE="https://github.com/dermatty/GINZIBIX"
 SRC_URI="https://github.com/dermatty/${MY_PN}/archive/${PN}-${PV}.tar.gz"
-#https://github.com/dermatty/GINZIBIX/archive/ginzibix-1.0.tar.gz
 
 echo $SRC_URI
 

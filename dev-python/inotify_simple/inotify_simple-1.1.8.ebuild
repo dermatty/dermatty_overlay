@@ -7,8 +7,8 @@ inherit distutils-r1 eutils user
 
 DESCRIPTION="A simple Python wrapper around inotify"
 HOMEPAGE="https://github.com/chrisjbillington/${PN}"
-#https://github.com/chrisjbillington/inotify_simple/archive/1.1.8.tar.gz
-SRC_URI="https://github.com/chrisjbillington/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/chrisjbillington/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+
 
 LICENSE="GPL-3+"
 SLOT="0"
