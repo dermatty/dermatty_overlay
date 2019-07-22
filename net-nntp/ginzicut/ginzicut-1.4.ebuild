@@ -9,12 +9,11 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A NNTP test server for ginzibx"
 HOMEPAGE="https://github.com/dermatty/${MY_PN}"
-SRC_URI="https://github.com/dermatty/${MY_PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/dermatty/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
-#IUSE="+python_single_target_python3_7"
 
 RDEPEND=">=dev-python/redis-py-3.2.1[${PYTHON_USEDEP}]"
 
