@@ -9,9 +9,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Binary newsreader for the Gnome Desktop"
 HOMEPAGE="https://github.com/dermatty/GINZIBIX"
-SRC_URI="https://github.com/dermatty/${MY_PN}/archive/${PN}-${PV}.tar.gz"
-
-echo $SRC_URI
+SRC_URI="https://github.com/dermatty/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -31,7 +29,7 @@ RDEPEND=">=dev-python/pyzmq-17.1.0[${PYTHON_USEDEP}]
 	>=net-nntp/ginzyenc-1.2.3[${PYTHON_USEDEP}]
 	app-arch/unrar"
 
-S=${WORKDIR}/${MY_PN}-${PN}-${PV}
+S=${WORKDIR}/${MY_PN}-${PV}
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
