@@ -24,12 +24,13 @@ src_unpack() {
 	cd "${S}"
 }
 
-#src_install() {
-#	cp -pPR "${WORKDIR}"/{usr,etc} "${D}"/ || die "Installation failed"
+src_install() {
+	#cp -pPR "${WORKDIR}"/{usr,etc} "${D}"/ || die "Installation failed"
+	echo "${WORKDIR} ${D}"
 #
 #	echo "SEARCH_DIRS_MASK=\"/usr/lib*/insync\"" > "${T}/70${PN}" || die
 #	insinto "/etc/revdep-rebuild" && doins "${T}/70${PN}" || die
-#}
+}
 
 pkg_postinst() {
 	elog "To automatically start insync add 'insync start' to your session"
